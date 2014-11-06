@@ -7,5 +7,7 @@ APUE源码学习
     编译需要将libapue.a加上，例如：
     
         $gcc my_ls.c libapue.a -o my_ls
+        或
+        $gcc -o my_ls my_ls.c -lapue
         
     也可以在src目录下make (makefile写的不太好啊)
