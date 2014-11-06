@@ -1,7 +1,7 @@
 /*
  * my_ls.c - 列出一个目录中的所有文件
  */
-
+#include "my_ls.h"
 #include "apue.h"
 #include <dirent.h>
 
@@ -25,18 +25,6 @@ int main(int argc, char *argv[])
 	/*
 	 * readdir(3) : It returns NULL on reaching the end of the directory stream or if an error occurred.
 	 */
-	/////////////////////////////////////////////////////////////////////////////////
-	#if 0
-    struct dirent {
-    	ino_t          d_ino;       /* inode number */
-        off_t          d_off;       /* not an offset;the current position in the directory stream*/
-        unsigned short d_reclen;    /* length of this record */
-        unsigned char  d_type;      /* type of file; not supported
-         	                              by all file system types */
-        char           d_name[256]; /* filename */
-    };
-	#endif
-	////////////////////////////////////////////////////////////////////////////////
 	while((dirp = readdir(dp)) != NULL)
 		printf("%s\n", dirp->d_name);
 	
