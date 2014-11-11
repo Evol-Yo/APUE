@@ -1,3 +1,7 @@
+/*
+ * print_file_status_flags - 打印文件状态标志
+ */
+
 #include "apue.h"
 #include <fcntl.h>
 
@@ -50,7 +54,7 @@ int main(int argc, char *argv[])
 
 /*
  * fcntl(2) - 定义在<fcntl.h>头文件中，改变已打开文件的性质
- * 功能：
+ * Dest：
  * 		(1)复制一个现有的描述符（cmd = F_DUPFD）
  * 		(2)获得/设置文件描述符标记（cmd = F_GETFD 或 F_SETFD）
  * 		(3)获得/设置文件状态标志（cmd = F_GETFL 或 F_SETFL）

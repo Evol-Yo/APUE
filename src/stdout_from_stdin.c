@@ -1,3 +1,7 @@
+/*
+ * stdout_from_stdin - 复制标准输入到标准输出
+ */
+
 #include "apue.h"
 #include "stdout_from_stdin.h"
 #include <stdio.h>
@@ -51,6 +55,7 @@ int main()
 	return 0;
 }
 
+//复制22711664字节到一个临时文件，并unlink该文件
 //测试结果
 //BUFFERSIZE 	real	user	sys
 //1          	37.82	1.58	35.31

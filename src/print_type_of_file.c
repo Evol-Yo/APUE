@@ -1,3 +1,7 @@
+/*
+ * print_type_of_file - 打印文件类型
+ */
+
 #include "apue.h"
 
 int main(int argc, char *argv[])
