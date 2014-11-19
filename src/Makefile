@@ -6,22 +6,23 @@ all : 	my_ls \
 
 .PHONY : all
 
-Flags = -g
+Flags = -g -Wall
+apue = -lapue
 
-my_ls : my_ls.c my_ls.h libapue.a
-	gcc $(Flags) -o my_ls my_ls.c my_ls.h libapue.a
+my_ls : my_ls.c my_ls.h
+	gcc $(Flags) -o my_ls my_ls.c my_ls.h $(apue)
 
-stdout_from_stdin : stdout_from_stdin.c stdout_from_stdin.h libapue.a
-	gcc $(Flags) -o stdout_from_stdin stdout_from_stdin.c stdout_from_stdin.h libapue.a
+stdout_from_stdin : stdout_from_stdin.c stdout_from_stdin.h
+	gcc $(Flags) -o stdout_from_stdin stdout_from_stdin.c stdout_from_stdin.h $(apue)
 
 print_file_status_flags : print_file_status_flags.c
-	gcc $(Flags) -o print_file_status_flags print_file_status_flags.c libapue.a
+	gcc $(Flags) -o print_file_status_flags print_file_status_flags.c $(apue)
 
-print_type_of_file :
-	gcc $(Flags) -o print_type_of_file print_type_of_file.c libapue.a
+print_type_of_file : print_type_of_file.c
+	gcc $(Flags) -o print_type_of_file print_type_of_file.c $(apue)
 	
-tmpnam : tmpnam.c libapue.a
-	gcc $(Flags) -o tmpnam tmpnam.c libapue.a
+tmpnam : tmpnam.c
+	gcc $(Flags) -o tmpnam tmpnam.c $(apue)
 
 clear :
 	rm 	my_ls \
