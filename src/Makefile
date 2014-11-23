@@ -2,7 +2,8 @@ all : 	my_ls \
 		stdout_from_stdin \
 		print_file_status_flags \
 		print_type_of_file \
-		tmpnam
+		tmpnam \
+		fork
 
 .PHONY : all
 
@@ -24,10 +25,14 @@ print_type_of_file : print_type_of_file.c
 tmpnam : tmpnam.c
 	gcc $(Flags) -o tmpnam tmpnam.c $(apue)
 
+fork : fork.c
+	gcc $(Flags) -o fork fork.c $(apue)
+
 clear :
 	rm 	my_ls \
 		stdout_from_stdin \
 		print_file_status_flags \
 		print_type_of_file \
-		tmpnam
+		tmpnam \
+		fork
 
