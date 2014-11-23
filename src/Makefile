@@ -1,4 +1,4 @@
-all : 	my_ls \
+all :	my_ls \
 		stdout_from_stdin \
 		print_file_status_flags \
 		print_type_of_file \
