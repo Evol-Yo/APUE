@@ -1,6 +1,7 @@
 #ifndef STDOUT_FROM_STDIN_H
 #define STDOUT_FROM_STDIN_H
 
+#include "apue.h"
 #include <sys/times.h>
 #include <stdio.h>
 #include <unistd.h>
