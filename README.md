@@ -11,3 +11,4 @@ APUE源码学习
         $gcc -o my_ls my_ls.c -lapue
         
     也可以在src目录下make (makefile写的不太好啊)
+	命令"make clear"清除所有的可执行文件
